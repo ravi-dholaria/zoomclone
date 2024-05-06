@@ -27,6 +27,12 @@ const MeetingTypeList = () => {
   const [callDetails, setCallDetails] = useState<Call>();
   const { toast } = useToast();
 
+  const joinLink = (url: string) => {
+    const baseUrl = "zoomclone-murex.vercel.app/";
+    const startIndex = url.indexOf(baseUrl) + baseUrl.length;
+    const pathAndUser = url.substring(startIndex);
+    return pathAndUser;
+  };
   const CreateMeeting = async () => {
     if (!client || !user) return;
     try {
@@ -159,7 +165,10 @@ const MeetingTypeList = () => {
         title="Type the link here"
         className="text-center"
         buttonText="Join Meeting"
-        handleClick={() => route.push(values.link)}
+        handleClick={() => {
+          let link = joinLink(values.link);
+          route.push(`${link}`);
+        }}
       >
         <Input
           type="text"
