@@ -48,7 +48,7 @@ export default function RootLayout({
             name="keywords"
             content="video conferencing, online meetings, web meetings"
           />
-          <meta name="author" content="Your Name or Your Company" />
+          <meta name="author" content="Ravi Dholariya" />
           <meta
             property="og:title"
             content="Yoom - Your Video Conferencing Solution"
