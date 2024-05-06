@@ -33,13 +33,14 @@ export default function RootLayout({
           colorBackground: "#1C1F2E",
           colorInputBackground: "#252A41",
           colorInputText: "#fff",
+          colorAlphaShade: "#ffffff",
         },
       }}
     >
       <html lang="en">
         <head>
           <title>Yoom</title>
-          <link rel="icon" href="/icons/yoom-logo.svg" />
+          <link rel="icon" href="/icons/logo.svg" />
         </head>
         <body className={`${inter.className} bg-dark-2`}>
           {children}
