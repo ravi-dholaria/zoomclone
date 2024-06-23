@@ -18,4 +18,3 @@ export const config = {
 };
 
 
-# Modified by script
